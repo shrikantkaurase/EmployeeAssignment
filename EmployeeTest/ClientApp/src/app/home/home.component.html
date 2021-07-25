@@ -1,0 +1,20 @@
+<h1 id="tableLabel">Employee Info</h1>
+<p>
+  This page will displaying a list of
+  employees with their corresponding company
+</p>
+<p *ngIf="!employeeinfo"><em>Loading...</em></p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="employeeinfo">
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Employee Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let empinfo of employeeinfo">
+      <td>{{ empinfo.employee }}</td>
+      <td>{{ empinfo.company }}</td>
+    </tr>
+  </tbody>
+</table>
